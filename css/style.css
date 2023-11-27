@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
+/* Predefined Colors */
+
 :root{
     --primary-color: #E50914;
     --primary-color-hover: #c70e17;
@@ -8,6 +10,8 @@
     --secondary-text-color: #b3b3b3;
 }
 
+
+/* Starting of CSS */
 
 *{
     margin: 0;
@@ -23,9 +27,6 @@ body{
     scroll-behavior: smooth;
 }
 
-/* .wrapper{
-   
-} */
 .background{
     overflow: hidden;
 }
@@ -44,6 +45,7 @@ body{
     background-color: rgba(0 0 0 / 40%);
     background-image: linear-gradient(to top, rgba(0, 0 , 0, 0.75) 0%, rgba(0, 0 , 0, 0) 60%, rgba(0, 0 , 0, 0.8) 100%);
 }
+
 /* Header Section starts here */
 
 header{
@@ -128,6 +130,11 @@ header .navbar{
     width: 1rem;
     height: 1rem;
 }
+
+/* Header Section Ends */
+
+
+
 
 
 
