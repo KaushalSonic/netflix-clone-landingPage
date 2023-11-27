@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root{
+    --primary-color: #E50914;
+    --primary-color-hover: #c70e17;
+    --secondary-color: #000;
+    --primary-text-color: #fff;
+    --secondary-text-color: #b3b3b3;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    background-color: black;
+    scroll-behavior: smooth;
+}
+
+/* .wrapper{
+   
+} */
+.background{
+    overflow: hidden;
+}
+.background > img {
+    width: 100%;
+    height: 100dvh;
+    object-fit: cover;
+    transform: scale(1.25) translateY(-9%);
+}
+.hero-section{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0 0 0 / 40%);
+    background-image: linear-gradient(to top, rgba(0, 0 , 0, 0.75) 0%, rgba(0, 0 , 0, 0) 60%, rgba(0, 0 , 0, 0.8) 100%);
+}
+/* Header Section starts here */
+
+header{
+    position: relative;
+    top: 0;
+    padding: 1.5rem;
+    margin: 0 10%;
+    display: flex;
+    justify-content: space-between;
+}    
+
+header nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+nav .logo{
+    width: 9.25rem;
+    height: 2.5rem;
+}
+nav .logo img{
+    object-fit: cover;
+    width: 100%
+}
+
+header .navbar{
+    position: relative;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+    padding-top: 0.4rem;
+    font-family: inherit;
+}
+
+.navbar #lang{
+    background-color: transparent;
+    color: var(--primary-text-color);
+    padding: 0.2rem 2.4rem;
+    border-radius: 0.3rem;
+    appearance: none;
+}
+
+.navbar #lang:focus{
+    border: 2px solid var(--primary-text-color);
+}
+
+.navbar #lang option{
+    text-align: center;
+}
+.navbar #signin{
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    margin-left: 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--primary-text-color);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+.navbar #signin:hover{
+    background-color: var(--primary-color-hover);
+}
+
+.navbar #arrow-icon{
+    position: absolute;
+    top: 0.9rem;
+    left: 6.5rem;
+}
+
+.navbar #arrow-icon img{
+    width: 0.8rem;
+    height: 0.8rem;
+}
+
+.navbar #translation-icon{
+    position: absolute;
+    top: 0.95rem;
+    left: 1rem;
+}
+
+.navbar #translation-icon img{
+    width: 1rem;
+    height: 1rem;
+}
+
+
+
+
+
+/* Media Query for Tablet */
+@media screen and (max-width: 960px)
+{
+    header{
+        margin: 0 1.5rem;
+    }
+}
+
+
+/* Media Query for Mobile */
+/* @media screen and (max-width: 600px)
+*{
+
+}
+.wrapper {
+    width: 100%;
+}
+.hero-section > img {
+    width: auto;
+    object-fit: cover;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    transform: none;
+} */
