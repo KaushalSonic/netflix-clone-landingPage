@@ -1,0 +1,5 @@
+Breakpoints for Responsiveness:--
+
+1. 600 - For mobiles (Small Screen)
+2. 960 - For Tablet Screens
+3. 1280 and above - For Large Screens
