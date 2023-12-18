@@ -7,6 +7,7 @@
     --secondary-color: #000;
     --primary-text-color: #fff;
     --secondary-text-color: #b3b3b3;
+    --acent-color: #2D2D2D;
 }
 
 
@@ -22,8 +23,11 @@
 body{
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
-    background-color: black;
     scroll-behavior: smooth;
+}
+
+.wrapper{
+    background-color: var(--secondary-color);
 }
 
 .background{
@@ -158,16 +162,14 @@ header .navbar{
 }
 
 .hero-component{
-    border: 1px solid red;
     margin-bottom: 5rem;
     max-width: 36.45rem;
-
 }
 
 .hero-component h1{
     color: var(--primary-text-color);
     font-weight: 900;
-    font-size: 3.7rem;
+    font-size: 3.8rem;
     text-align: left;
     margin-bottom: 0;
     margin-top: 0rem;
@@ -178,20 +180,19 @@ header .navbar{
     color: var(--primary-text-color);
     text-align: center;
     font-size: 1.2rem;
-    font-weight: 900;
+    font-weight: 700;
     letter-spacing: 0.05rem;
     margin-top: 1rem;
     text-align: left;
 }
 
 .hero-component p:nth-child(3){
-    color: var(--primary-text-color);
+    color: var(--secondary-text-color);
     text-align: center;
     font-size: 1rem;
     font-weight: 500;
     margin-top: 2.5rem;
     text-align: left;
-    color: var(--secondary-text-color);
 }
 
 .subscription-form{
@@ -202,7 +203,7 @@ header .navbar{
     position: relative;
 }
 
-.subscription-form input[type="button"]{
+.subscription-form input[type="submit"]{
     margin-left: 0.5rem;
     background-color: var(--primary-color);
     color: var(--primary-text-color);
@@ -261,30 +262,16 @@ header .navbar{
 
 
 
-
-
 /* Media Query for Tablet */
-@media screen and (max-width: 960px)
+/* @media screen and (max-width: 960px)
 {
     header{
         margin: 0 1.5rem;
     }
-}
+} */
 
 
 /* Media Query for Mobile */
 /* @media screen and (max-width: 600px)
 *{
 
-}
-.wrapper {
-    width: 100%;
-}
-.hero-section > img {
-    width: auto;
-    object-fit: cover;
-    -webkit-transform: none;
-    -moz-transform: none;
-    -ms-transform: none;
-    transform: none;
-} */
