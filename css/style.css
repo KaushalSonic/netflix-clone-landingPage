@@ -36,11 +36,11 @@ body{
 }
 .background > img {
     width: 100%;
-    height: 100dvh;
+    height: 100vh;
     object-fit: cover;
-    transform: scale(1.25) translateY(-9%);
+    transform: scale(1.25) translateY(-10%);
 }
-.hero-section{
+.landing-component{
     position: absolute;
     top: 0;
     left: 0;
@@ -148,42 +148,40 @@ header .navbar{
     width: 100%;
     min-height: 80dvh;
     display: flex;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
     padding: 0 9.25rem;
 }
 
 .hero-component{
-    margin-bottom: 5rem;
-    max-width: 36.45rem;
+    margin-top: 6rem;
+    max-width: calc(100% - 4rem);
 }
 
 .hero-component h1{
     color: var(--primary-text-color);
-    font-weight: 900;
-    font-size: 3.8rem;
-    text-align: left;
-    margin-bottom: 0;
-    margin-top: 0rem;
-    line-height: 5.5rem;
+    font-weight: 700;
+    font-size: 3.2rem;
+    text-align: center;
+    margin: 0;
+    /* line-height: 5.5rem; */
 }
 
 .hero-component p:nth-child(2){
     color: var(--primary-text-color);
     text-align: center;
-    font-size: 1.2rem;
-    font-weight: 700;
+    font-size: 1.4rem;
+    font-weight: 400;
     letter-spacing: 0.05rem;
-    margin-top: 1rem;
-    text-align: left;
+    margin-top: 1.2rem;
 }
 
 .hero-component p:nth-child(3){
-    color: var(--secondary-text-color);
+    color: var(--primary-text-color);
     text-align: center;
-    font-size: 1rem;
-    font-weight: 500;
-    margin-top: 2.5rem;
-    text-align: left;
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-top: 1.8rem;
 }
 
 .subscription-form{
@@ -208,21 +206,25 @@ header .navbar{
     letter-spacing: 0.02rem;
 }
 
-.subscription-form #right-arrow{
-    position: absolute;
-    top: 2rem;
-    right: 0.9rem;
-    
+.subscription-form > div{
+    position: relative;
+    display: flex;
 }
-
-.subscription-form #right-arrow img{
+.subscription-form > div #right-arrow{
+    position: absolute;
+    top: 0.8rem;
+    right: 1.2rem;
     width: 1.9rem;
     height: 1.9rem;
+    background-image: url('../assests/right-arrow.svg');
+    background-size: cover;
 }
 
-.subscription-form input[type="button"]:hover{
+
+.subscription-form input[type="submit"]:hover{
     background-color: var(--primary-color-hover);
 }
+
 
 .subscription-form input[type="email"]{
     width: 23rem;
@@ -261,6 +263,15 @@ header .navbar{
     }
 } */
 
+@media screen and (max-width: 600px){
+    html{
+        font-size: 15px;
+    }
+    .hero-component{
+        max-width: calc(100% - 3rem);
+    }
+
+}
 
 /* Media Query for Mobile */
 /* @media screen and (max-width: 600px)

@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+/* Color Palette */
+
+:root{
+    --primary-color: #E50914;
+    --primary-color-hover: #c70e17;
+    --secondary-color: #000;
+    --primary-text-color: #fff;
+    --secondary-text-color: #b3b3b3;
+    --acent-color: #232323;
+}
+
+
+/* Starting of CSS */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html{
+    font-size: 16px;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    background-color: var(--secondary-color);
+    scroll-behavior: smooth;
+    width: 100%;
+    height: 100dvh;
+   
+}
+
+/* Section Divder line */
+
+.section-divider{
+    width: 100%;
+    height: 0.5rem;
+    background-color: var(--acent-color);
+}
+
+/* Media Component Layout Starts */
+
+.multimedia-layout{
+    width: 100%;
+    padding: 4rem 0rem;
+    display: flex;
+    justify-content: center;
+
+}
+
+.multimedia-component{
+    margin-left: 0.8rem;
+    width: 67rem;
+    height: 25rem;
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid #0071eb; */
+}
+
+.multimedia-component .multi-1{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Text Section */
+
+.multi-text{
+    width: 100%;
+    text-align: left;
+}
+.multi-text h2{
+    font-weight: 900;
+    color: var(--primary-text-color);
+    font-size: 3.2rem;
+}
+
+.multi-text p{
+    margin: 1rem 1rem 1.5rem 0rem;
+    font-weight: 400;
+    color: var(--primary-text-color);
+    font-size: 1.56rem;
+}
+
+/* Image - Video Section */
+
+.multimedia-component .multi-2{
+    position: relative;
+    width: 50%;
+}
+
+/* TV Image */
+
+.multi-2 .multi-image{
+    height: 100%;
+    width: 99%;
+}
+.multi-2 .multi-image img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* TV Vidoe */
+
+.multi-2 .multi-video{
+    position: absolute;
+    top: 20%;
+    left: 13.5%;
+    width: 72%;
+    height: 53.5%;
+    z-index: -1;
+    overflow: hidden;
+}
+.multi-2 .multi-video video{
+    object-fit: contain;
+}
+
+/* Strange Things Box Starts */
+
+.multimedia-layout .mc2{
+    flex-direction: row-reverse;
+}
+.multimedia-layout .mc2 .multi-2 .strange-box{
+    position: absolute;
+    left: 22%;
+    bottom: 8%;
+    width: 55%;
+    height: 6.3rem;
+    background-color: var(--secondary-color);
+    border: 2px solid rgba(128, 128, 128, 0.7);
+    border-radius: 0.75rem;
+    box-shadow: 0 0 2em 0 rgb(0,0,0);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0.5rem 0rem;
+}
+.multimedia-layout .mc2 .multi-2 .strange-box .strange-book{
+    width: 20%;
+}
+.multimedia-layout .mc2 .multi-2 .strange-box .strange-book img{
+    object-fit: cover;
+    width: 100%;
+}
+.multimedia-layout .mc2 .multi-2 .strange-box .strange-text{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.multimedia-layout .mc2 .multi-2 .strange-box .strange-text p{
+    color: var(--primary-text-color);
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+.multimedia-layout .mc2 .multi-2 .strange-box .strange-text #downloading{
+    color: #0071eb;
+    font-size: 0.95rem;
+    margin-top: 0.2rem;
+}
+.multimedia-layout .mc2 .multi-2 .strange-box .strange-gif{
+    width: 20%;
+}
+.multimedia-layout .mc2 .multi-2 .strange-box .strange-gif img{
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Strange Things Box Ends */
+
+
+.multimedia-layout .mc3 .multi-2 .multi-video{
+    top: 10%;
+    left: 18%;
+    width: 62.5%;
+    height: 47%;
+}
+.multimedia-layout .mc3 .multi-1 .multi-text p{
+    margin-right: 0;
+}
+
+.multimedia-layout .mc4{
+    flex-direction: row-reverse;
+}
+.multimedia-layout .mc4 .multi-1 .multi-text p{
+    margin-right: 0;
+}
+
+/* Media Component Layout Ends */
+
+
+/* Making Responsive Layouts */
+
+@media screen and (max-width: 1280px){
+    html{
+        font-size: 16px;
+    } 
+   
+    .multimedia-component{
+        width: 95%;
+        margin: 0;
+    }
+    .multimedia-layout .multimedia-component .multi-2 .multi-video{
+        height: 53%;
+    }
+    .multimedia-layout .mc2 .multi-2 .strange-box{
+        width: 64%;
+        left: 17%;
+        bottom: 8%;
+        height: 23%;
+        padding: 0.2rem 0.8rem;
+        justify-content: space-between;
+    }
+    .multimedia-layout .mc2 .multi-2 .strange-box .strange-book{
+        width: 14%;
+    }
+    .multimedia-layout .mc2 .multi-2 .strange-box .strange-text{
+        width: 65%;
+    }
+    .multimedia-layout .mc2 .multi-2 .strange-box .strange-gif{
+        width: 13%;
+    }
+}
+
+
+@media screen and (max-width: 960px){
+    html{
+        font-size: 15px;
+    }
+    .section-divider{
+        height: 0.6rem;
+    }
+    .multimedia-layout{
+        display: flex;
+    }
+    .multimedia-layout .multimedia-component{
+        flex-direction: column;
+        width: auto;
+        height: auto;
+        margin: 0 2rem;
+        align-items: center;
+    }
+    .multi-text h2{
+        font-size: 2.25rem;
+        font-weight: 700;
+    }
+    .multi-text p{
+        font-size: 1.25rem;
+        font-weight: 400;
+        margin: 0;
+        margin-top: 1.2rem;
+        margin-bottom: 1.2rem;
+    }
+    .multimedia-layout .multimedia-component .multi-1{
+        width: auto;
+    }
+    .multimedia-layout .multimedia-component .multi-2{
+        width: auto;
+        margin-bottom: 1rem;
+    }
+    .multimedia-layout .multimedia-component .multi-2 .multi-video{
+        height: 53%;
+    }
+    .multimedia-layout .mc2 .multi-2 .strange-box{
+        width: 65%;
+        left: 17%;
+        bottom: 6%;
+        height: 20%;
+        padding: 0.2rem 0.8rem;
+        justify-content: space-between;
+    }
+    .multimedia-layout .mc2 .multi-2 .strange-box .strange-book{
+        width: 11.5%;
+    }
+    .multimedia-layout .mc2 .multi-2 .strange-box .strange-text{
+        width: 65%;
+    }
+    .multimedia-layout .mc2 .multi-2 .strange-box .strange-gif{
+        width: 13%;
+    }
+    .multimedia-layout .multimedia-component .multi-1 .multi-text{
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 600px){
+    html{
+        font-size: 12px;
+    }
+    .section-divider{
+        height: 0.7rem;
+    }
+    
+    .multi-text h2{
+        font-size: 2.8rem;
+        font-weight: 700;
+    }
+    .multi-text p{
+        font-size: 1.45rem;
+        font-weight: 400;
+        margin: 0;
+        margin-top: 1.65rem;
+        margin-bottom: 2.35rem;
+    }
+    
+    .multimedia-layout .mc2 .multi-2 .strange-box{
+        width: 82%;
+        left: 8.5%;
+        height: 26.5%;
+        bottom: 7%;
+    }
+    .multimedia-layout .mc2 .multi-2 .strange-box .strange-book{
+        width: 15%;
+    }
+    .multimedia-layout .mc2 .multi-2 .strange-box .strange-text p{
+        font-size: 1.2rem;
+    }
+    .multimedia-layout .mc2 .multi-2 .strange-box .strange-text{
+        width: 52%;
+    }
+    .multimedia-layout .mc2 .multi-2 .strange-box .strange-gif{
+        width: 20%;
+    }
+}
+    
