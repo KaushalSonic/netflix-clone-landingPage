@@ -30,8 +30,6 @@ body{
     background-color: var(--secondary-color);
     scroll-behavior: smooth;
     width: 100%;
-   
-    /* padding: 0rem 10.5rem 0rem 9.25rem; */
 }
 .section-divider{
     width: 100%;
@@ -48,7 +46,6 @@ body{
 
 .faq-component{
     width: 100%;
-    border: 1px solid red;
 }
 
 .faq-component > h2{
@@ -98,7 +95,6 @@ body{
     right: 1.7rem;
     width: 1.8rem;
     height: 1.8rem;
-    /* transform: rotate(45deg); */
 }
 
 .accordion .content{
@@ -119,9 +115,96 @@ body{
     transform: rotate(45deg);
 }
 
+
+/* Subscription box Starts*/
+/* Have to remove this when combined */
+
+.form-heading{
+    color: var(--primary-text-color);
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-top: 1.8rem;
+}
+
+.subscription-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1.2rem;
+    position: relative;
+}
+
+.subscription-form input[type="submit"]{
+    margin-left: 0.5rem;
+    background-color: var(--primary-color);
+    color: var(--primary-text-color);
+    padding: 0.9rem 3.5rem 0.9rem 1.5rem;
+    border-radius: 0.3rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.02rem;
+}
+
+.subscription-form > div{
+    position: relative;
+    display: flex;
+}
+.subscription-form > div #right-arrow{
+    position: absolute;
+    top: 0.8rem;
+    right: 1.2rem;
+    width: 1.9rem;
+    height: 1.9rem;
+    background-image: url('../assests/right-arrow.svg');
+    background-size: cover;
+}
+
+
+.subscription-form input[type="submit"]:hover{
+    background-color: var(--primary-color-hover);
+}
+
+
+.subscription-form input[type="email"]{
+    width: 23rem;
+    height: 3.5rem;
+    border-radius: 0.3rem;
+    outline: none;
+    border: 0.1px solid rgb(110, 108, 108);
+    background-color: rgba(32, 23, 23, 0.7);
+    padding: 1rem 0.8rem;
+}
+
+.subscription-form input[type="email"]::placeholder{
+    color: var(--secondary-text-color);
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.subscription-form input[type="email"]::placeholder:focus::-webkit-input-placeholder{
+    transition: 0.5s 0.5s ease;
+    opacity: 0;
+}
+
+.subscription-form input[type="email"]:focus{
+    border: 2px solid var(--primary-text-color);
+    color: var(--primary-text-color);
+}
+
+/* Subscription box Ends*/
+
+
+
 /* Responsiveness */
 
 @media screen and (max-width: 1279px){
+    html{
+        font-size: 16px;
+    }
     .faq-layout{
         padding: 4rem 3%;
     }

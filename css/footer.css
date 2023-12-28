@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+/* Color Palette */
+
+:root{
+    --primary-color: #E50914;
+    --primary-color-hover: #c70e17;
+    --secondary-color: #000;
+    --primary-text-color: #fff;
+    --secondary-text-color: #b3b3b3;
+    --acent-color: #232323;
+}
+
+
+/* Starting of CSS */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html{
+    font-size: 16px;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    background-color: var(--secondary-color);
+    scroll-behavior: smooth;
+    width: 100%;
+}
+
+.section-divider{
+    width: 100%;
+    height: 0.5rem;
+    background-color: var(--acent-color);
+}
+
+.footer-layout{
+    width: 100%;
+    padding: 4rem 11.8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer{
+    width: 100%;
+    text-align: left;
+}
+footer .contact{
+    color: var(--secondary-text-color);
+    
+}
+footer .contact a{
+    color: var(--secondary-text-color);
+    text-decoration: underline;   
+    font-size: 1rem;
+}
+
+/* Footer Links Starts*/
+
+footer .links{
+    margin: 1.5rem 0rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    row-gap: 1rem;
+    column-gap: 0.8rem;
+}
+footer .links li a{
+    color: var(--secondary-text-color);
+    font-size: 0.85rem;
+    text-decoration: underline;
+    transition: color 0.2s;
+}
+footer .links li a:active{
+    color: var(--primary-color);
+}
+
+/* Footer links Ends */
+
+/* To be deleted when merge */
+
+.lang-button{
+    position: relative;
+    display: inline;
+}
+
+.lang-button #lang{
+    background-color: rgba(22, 22, 22, 0.7);
+    color: var(--primary-text-color);
+    padding: 0.38rem 2.2rem;
+    border-radius: 0.3rem;
+    appearance: none;
+}
+
+.lang-button #lang:focus{
+    border: 2px solid var(--primary-text-color);
+}
+
+.lang-button #lang option{
+    text-align: center;
+}
+.lang-button #arrow-icon{
+    position: absolute;
+    top: 10%;
+    left: 78%;
+}
+
+.lang-button #arrow-icon img{
+    width: 0.7rem;
+    height: 0.7rem;
+}
+
+.lang-button #translation-icon{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+.lang-button #translation-icon img{
+    width: 1.05rem;
+    height: 1.05rem;
+}
+
+/* Till to be deleted */
+
+footer #region{
+    margin-top: 1.9rem;
+    display: block;
+    color: var(--secondary-text-color);
+    font-size: 0.85rem;
+}
+
+/* Responsiveness */
+
+@media screen and (max-width: 1279px){
+    .footer-layout{
+        padding: 4rem 3%;
+    }
+   
+}
+
+@media screen and (max-width: 960px){
+    
+    .footer-layout{
+        padding: 1.5rem 3%;
+        padding-bottom: 2rem;
+    }
+    footer .links{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        row-gap: 0.9rem;
+    }
+    footer #region{
+        margin-top: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 600px){
+    
+    .footer-layout{
+        padding: 1.5rem 6%;
+        padding-bottom: 1.8rem;
+    }
+    footer .links{
+        row-gap: 0.9rem;
+    }
+    footer #region{
+        margin-top: 1.5rem;
+    }
+}
