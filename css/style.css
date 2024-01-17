@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
-/* Predefined Colors */
+/* Predefined Color Pallete */
 
 :root{
     --primary-color: #E50914;
@@ -8,11 +8,13 @@
     --secondary-color: #000;
     --primary-text-color: #fff;
     --secondary-text-color: #b3b3b3;
-    --acent-color: #2D2D2D;
+    --acent-color: #232323;
 }
 
 
-/* Starting of CSS */
+html{
+    font-size: 16px;
+}
 
 *{
     margin: 0;
@@ -27,18 +29,23 @@ body{
     scroll-behavior: smooth;
 }
 
-.wrapper{
-    background-color: var(--secondary-color);
-}
+/* Landing Component Starts ... */
 
+.wrapper{
+    position: relative;
+    background-color: var(--secondary-color);
+    height: 44rem;
+}
 .background{
     overflow: hidden;
+    height: 100%;
+    
 }
 .background > img {
     width: 100%;
-    height: 100vh;
+    min-height: 105%;
     object-fit: cover;
-    transform: scale(1.25) translateY(-10%);
+    transform: scale(1.25) translateY(-13.5%);
 }
 .landing-component{
     position: absolute;
@@ -46,21 +53,21 @@ body{
     left: 0;
     right: 0;
     bottom: 0;
+    padding: 0 10%;
     background-color: rgba(0 0 0 / 40%);
     background-image: linear-gradient(to top, rgba(0, 0 , 0, 0.75) 0%, rgba(0, 0 , 0, 0) 60%, rgba(0, 0 , 0, 0.8) 100%);
 }
 
-/* Header Section starts here */
+/* -> Header Section starts here */
 
 header{
     position: relative;
     top: 0;
     padding: 1.5rem;
-    margin: 0 10%;
     display: flex;
     justify-content: space-between;
+    z-index: 1;
 }    
-
 header nav{
     width: 100%;
     display: flex;
@@ -74,7 +81,6 @@ nav .logo img{
     object-fit: cover;
     width: 100%
 }
-
 .navbar{
     width: auto;
     display: flex;
@@ -83,25 +89,20 @@ nav .logo img{
     font-family: inherit;
     z-index: 1;
 }
-
 .lang-button{
     position: relative;
     display: inline-block;
 }
-
 .lang-button #lang{
     background-color: rgba(22, 22, 22, 0.7);
     color: var(--primary-text-color);
     padding: 0.38rem 2.32rem;
     border-radius: 0.3rem;
     appearance: none;
-   
 }
-
 .lang-button #lang:focus{
     border: 2px solid var(--primary-text-color);
 }
-
 .lang-button #lang option{
     text-align: center;
 }
@@ -110,23 +111,25 @@ nav .logo img{
     top: 20%;
     left: 78%;
 }
-
 .lang-button #arrow-icon img{
     width: 0.7rem;
     height: 0.7rem;
 }
-
+.lang-button #lang-label{
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    color: var(--primary-text-color);
+}
 .lang-button #translation-icon{
     position: absolute;
     top: 22%;
     left: 10%;
 }
-
 .lang-button #translation-icon img{
     width: 1.05rem;
     height: 1.05rem;
 }
-
 .navbar #signin{
     padding: 0.5rem 1rem;
     border-radius: 0.3rem;
@@ -142,11 +145,10 @@ nav .logo img{
     background-color: var(--primary-color-hover);
 }
 
+/* -> Header Section Ends */
 
 
-/* Header Section Ends */
-
-/* Hero Component Starts */
+/* -> Hero Component Starts */
 
 .hero-layout{
     position: absolute;
@@ -155,27 +157,24 @@ nav .logo img{
     bottom: 0;
     right: 0;
     width: 100%;
-    min-height: 80dvh;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0 9.25rem;
 }
-
 .hero-component{
     margin-top: 6rem;
     max-width: calc(100% - 4rem);
+    z-index: 1;
 }
-
 .hero-component h1{
     color: var(--primary-text-color);
     font-weight: 700;
     font-size: 3.2rem;
     text-align: center;
     margin: 0;
-    /* line-height: 5.5rem; */
 }
-
 .hero-component p:nth-child(2){
     color: var(--primary-text-color);
     text-align: center;
@@ -184,7 +183,6 @@ nav .logo img{
     letter-spacing: 0.05rem;
     margin-top: 1.2rem;
 }
-
 .form-heading{
     color: var(--primary-text-color);
     text-align: center;
@@ -192,7 +190,6 @@ nav .logo img{
     font-weight: 400;
     margin-top: 1.8rem;
 }
-
 .subscription-form{
     display: flex;
     justify-content: center;
@@ -200,7 +197,6 @@ nav .logo img{
     padding-top: 1.2rem;
     position: relative;
 }
-
 .subscription-form input[type="submit"]{
     margin-left: 0.5rem;
     background-color: var(--primary-color);
@@ -214,76 +210,190 @@ nav .logo img{
     font-weight: 700;
     letter-spacing: 0.02rem;
 }
-
 .subscription-form > div{
-    position: relative;
     display: flex;
 }
-.subscription-form > div #right-arrow{
+.submit-button{
+    position: relative;
+}
+.submit-button #right-arrow{
     position: absolute;
-    top: 0.8rem;
+    bottom: 0.8rem;
     right: 1.2rem;
     width: 1.9rem;
     height: 1.9rem;
     background-image: url('../assests/right-arrow.svg');
     background-size: cover;
 }
-
-
 .subscription-form input[type="submit"]:hover{
     background-color: var(--primary-color-hover);
 }
-
-
 .subscription-form input[type="email"]{
     width: 23rem;
     height: 3.5rem;
     border-radius: 0.3rem;
     outline: none;
-    border: 0.1px solid rgba(128, 128 , 128, 0.7);
+    border: 1px solid rgba(128, 128 , 128, 0.7);
     background-color: rgba(22, 22, 22, 0.7);
     padding: 1rem 0.8rem;
 }
-
 .subscription-form input[type="email"]::placeholder{
     color: var(--secondary-text-color);
     font-weight: 400;
     font-size: 1rem;
 }
-
 .subscription-form input[type="email"]::placeholder:focus::-webkit-input-placeholder{
     transition: 0.5s 0.5s ease;
     opacity: 0;
 }
-
 .subscription-form input[type="email"]:focus{
     border: 2px solid var(--primary-text-color);
     color: var(--primary-text-color);
 }
 
+/* -> Hero Component Ends  */
+
+/* Landing Component Ends ...  */
+
+.section-divider{
+    width: 100%;
+    height: 0.5rem;
+    background-color: var(--acent-color);
+}
 
 
 
+/* For Responsiveness */
 
-/* Media Query for Tablet */
-/* @media screen and (max-width: 960px)
-{
-    header{
-        margin: 0 1.5rem;
+@media screen and (max-width: 1279px){
+
+    /* Landing Component */
+
+    .landing-component{
+        padding: 0.3rem 2%;
     }
-} */
-
-@media screen and (max-width: 600px){
-    html{
-        font-size: 15px;
+    header{
+        padding: 1.2rem 0;
+    }
+    header nav .logo img{
+        width: 9.5rem;
+    }
+    .hero-layout{
+        padding: 0rem  2rem;
     }
     .hero-component{
-        max-width: calc(100% - 3rem);
+        max-width: none;
     }
+
+   
+}
+
+/* Media Query for Tablet */
+
+@media screen and (max-width: 960px){
+    
+    /* Landing Component */
+
+    .wrapper{
+        height: 32.2rem;
+    }
+    .landing-component{
+        padding: 0.1rem 2rem;
+    }
+    .logo{
+        padding-top: 0.4rem;
+    }
+    header nav .logo img{
+        width: 5.7rem;
+    }
+    .navbar #signin{
+        margin-left: 0.5rem;
+    }
+    .hero-component{
+        margin-top: 6rem;
+    }
+    .hero-component h1{
+        font-size: 2.1rem;
+    }
+    .hero-component p:nth-child(2){
+        font-size: 1.1rem;
+    }
+    .form-heading{
+        font-size: 1.15rem;
+    }
+
 
 }
 
 /* Media Query for Mobile */
-/* @media screen and (max-width: 600px)
-*{
 
+@media screen and (max-width: 600px){
+    
+    /* Landing Component */
+
+    .wrapper{
+        height: 35rem;
+    }
+    .landing-component{
+        padding: 0.1rem 1.5rem;
+    }
+    .background > img{
+        object-fit: cover;
+        object-position: left bottom;
+        transform: scale(1) translateY(-4.5%);
+    }
+    .logo{
+        padding-top: 0.2rem;
+    }
+    .hero-layout{
+        padding: 0;
+        padding: 0 1.6rem;
+    }
+    .hero-component{
+        margin-top: 6rem;
+        width: 100%;
+    }
+    .subscription-form > div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .subscription-form input[type="email"]{
+        width: 85%;
+        height: 2.8rem;
+    }
+    .form-heading{
+        padding: 0 0.5rem;
+    }
+    .subscription-form input[type="submit"]{
+        margin-left: 0;
+        margin-top: 1rem;
+        width: 10rem;
+        font-size: 1.1rem;
+        padding: 0.9rem 2.5rem 0.7rem 1rem;
+        font-weight: 500;
+    }
+    .submit-button #right-arrow{
+        right: 0.8rem;
+        bottom: 0.5rem;
+        width: 1.7rem;
+        height: 1.7rem;
+    }
+    .lang-button #lang{
+        padding: 0.38rem 0.3rem;
+    }
+    .lang-button #translation-icon{
+        top: 22%;
+        left: 18%;
+    }
+    .lang-button #lang-label{
+        display: none;
+    }
+    .lang-button #arrow-icon{
+        top: 20%;
+        left: 60%;
+    }
+
+
+}

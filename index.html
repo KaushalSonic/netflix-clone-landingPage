@@ -9,6 +9,9 @@
     <title>Netflix India - Clone</title>
 </head>
 <body>
+
+    <!-- Landing Component Starts ... -->
+
     <div class="wrapper">
         <div class="background">
             <img src="assests/hero-background.jpg" alt="Background Photo">
@@ -20,17 +23,19 @@
                     <div class="navbar">
                         <div class="lang-button">
                             <select name="lang" id="lang">
+                                <option value="" hidden></option>
                                 <option value="English">English</option>
                                 <option value="हिन्दी">हिन्दी</option>
                             </select>
                             <div id="arrow-icon">
                                 <img src="./assests/down-arrow.svg" alt="translation-svg">
                             </div>
+                            <div id="lang-label">English</div>
                             <div id="translation-icon">
                                 <img src="./assests/Translation.svg" alt="translation-svg">
                             </div>
                         </div>
-                        <a href="#" id="signin">Sign In</a>
+                        <a href="https://www.netflix.com/in/login" id="signin">Sign In</a>
                     </div>
                 </nav>
             </header>
@@ -42,15 +47,21 @@
                     <form class="subscription-form" action="#">
                         <div>
                             <input type="email" placeholder="Email address">
-                            <input type="submit" value="Get Started">
-                            <span id="right-arrow"></span>
-                        </div>
+                            <div class="submit-button">
+                                <input type="submit" value="Get Started">
+                                <span id="right-arrow"></span>
+                            </div>
                     </form>
-
-                
                 </div>
             </section>
         </div>
     </div>
+
+    <!-- Landing Component Ends ... -->
+
+    <div class="section-divider"></div>
+
+
+
 </body>
 </html>
