@@ -38,6 +38,8 @@ body{
     background-color: var(--acent-color);
 }
 
+/* Footer Component Starts */
+
 .footer-layout{
     width: 100%;
     padding: 4rem 11.8%;
@@ -45,7 +47,6 @@ body{
     justify-content: center;
     align-items: center;
 }
-
 footer{
     width: 100%;
     text-align: left;
@@ -60,7 +61,7 @@ footer .contact a{
     font-size: 1rem;
 }
 
-/* Footer Links Starts*/
+/* -> Footer Links Starts*/
 
 footer .links{
     margin: 1.5rem 0rem;
@@ -70,11 +71,9 @@ footer .links{
     row-gap: 1rem;
     column-gap: 0.8rem;
 }
-
 footer .links li{
     list-style: none;
 }
-
 footer .links li a{
     color: var(--secondary-text-color);
     font-size: 0.85rem;
@@ -85,7 +84,14 @@ footer .links li a:active{
     color: var(--primary-color);
 }
 
-/* Footer links Ends */
+/* -> Footer links Ends */
+
+footer #region{
+    margin-top: 1.9rem;
+    display: block;
+    color: var(--secondary-text-color);
+    font-size: 0.85rem;
+}
 
 /* To be deleted when merge */
 
@@ -133,12 +139,7 @@ footer .links li a:active{
 
 /* Till to be deleted */
 
-footer #region{
-    margin-top: 1.9rem;
-    display: block;
-    color: var(--secondary-text-color);
-    font-size: 0.85rem;
-}
+
 
 /* Responsiveness */
 

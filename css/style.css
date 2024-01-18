@@ -27,6 +27,7 @@ body{
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
     scroll-behavior: smooth;
+    background-color: var(--secondary-color);
 }
 
 /* Landing Component Starts ... */
@@ -255,15 +256,303 @@ nav .logo img{
 
 /* Landing Component Ends ...  */
 
+/* ---------------------------------------------------- */
+
+/* Multimedia Component Layout Starts ... */
+
 .section-divider{
     width: 100%;
     height: 0.5rem;
     background-color: var(--acent-color);
 }
 
+.multimedia-layout{
+    width: 100%;
+    padding: 4rem 0rem;
+    display: flex;
+    justify-content: center;
+
+}
+
+.multimedia-component{
+    margin-left: 0.8rem;
+    width: 67rem;
+    height: 25rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.multimedia-component .multi-1{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* -> Text Section */
+
+.multi-text{
+    width: 100%;
+    text-align: left;
+}
+.multi-text h2{
+    font-weight: 900;
+    color: var(--primary-text-color);
+    font-size: 3.2rem;
+}
+
+.multi-text p{
+    margin: 1rem 1rem 1.5rem 0rem;
+    font-weight: 400;
+    color: var(--primary-text-color);
+    font-size: 1.56rem;
+}
+
+/* -> Image - Video Section */
+
+.multimedia-component .multi-2{
+    position: relative;
+    width: 50%;
+}
+
+/* -> TV Image */
+
+.multi-2 .multi-image{
+    height: 100%;
+    width: 99%;
+}
+.multi-2 .multi-image img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* -> TV Vidoe */
+
+.multi-2 .multi-video{
+    position: absolute;
+    top: 20%;
+    left: 13.5%;
+    width: 72%;
+    height: 53.5%;
+    z-index: -1;
+    overflow: hidden;
+}
+.multi-2 .multi-video video{
+    object-fit: contain;
+}
+
+/* -> Strange Things Box Starts */
+
+.multimedia-layout .mc2{
+    flex-direction: row-reverse;
+}
+.multimedia-layout .mc2 .multi-2 .strange-box{
+    position: absolute;
+    left: 22%;
+    bottom: 8%;
+    width: 55%;
+    height: 6.3rem;
+    background-color: var(--secondary-color);
+    border: 2px solid rgba(128, 128, 128, 0.7);
+    border-radius: 0.75rem;
+    box-shadow: 0 0 2em 0 rgb(0,0,0);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0.5rem 0rem;
+}
+.multimedia-layout .mc2 .multi-2 .strange-box .strange-book{
+    width: 20%;
+}
+.multimedia-layout .mc2 .multi-2 .strange-box .strange-book img{
+    object-fit: cover;
+    width: 100%;
+}
+.multimedia-layout .mc2 .multi-2 .strange-box .strange-text{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.multimedia-layout .mc2 .multi-2 .strange-box .strange-text p{
+    color: var(--primary-text-color);
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+.multimedia-layout .mc2 .multi-2 .strange-box .strange-text #downloading{
+    color: #0071eb;
+    font-size: 0.95rem;
+    margin-top: 0.2rem;
+}
+.multimedia-layout .mc2 .multi-2 .strange-box .strange-gif{
+    width: 20%;
+}
+.multimedia-layout .mc2 .multi-2 .strange-box .strange-gif img{
+    object-fit: cover;
+    width: 100%;
+}
+
+/* -> Strange Things Box Ends */
 
 
-/* For Responsiveness */
+.multimedia-layout .mc3 .multi-2 .multi-video{
+    top: 10%;
+    left: 18%;
+    width: 62.5%;
+    height: 47%;
+}
+.multimedia-layout .mc3 .multi-1 .multi-text p{
+    margin-right: 0;
+}
+
+.multimedia-layout .mc4{
+    flex-direction: row-reverse;
+}
+.multimedia-layout .mc4 .multi-1 .multi-text p{
+    margin-right: 0;
+}
+
+/* Media Component Layout Ends ... */
+
+/* ---------------------------------------------- */
+
+/* FAQ Component Starts ... */
+
+.faq-layout{
+    width: 100%;
+    padding: 4rem 11.8%;
+    display: flex;
+    justify-content: center;
+}
+.faq-component{
+    width: 100%;
+}
+.faq-component > h2{
+    color: var(--primary-text-color);
+    font-size: 3.25rem;
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+.accordion{
+    width: 100%;
+}
+.accordion li{
+    list-style: none;
+    background-color: #2D2D2D;
+    position: relative;
+    margin-top: 0.5rem;
+    
+}
+.accordion li label{
+    color: var(--primary-text-color);
+    font-size: 1.48rem;
+    font-weight: 400;
+    padding: 1.8rem 1.4rem 1.7rem 1.5rem;
+    display: block;
+    border-bottom: 2px solid var(--secondary-color);
+    cursor: pointer;
+    transition: background-color 0.1s linear;
+}
+.accordion li label:hover{
+    background-color: #494848;
+}
+.accordion li input[type="radio"]{
+    display: none;
+}
+.accordion li #plus-cross{
+    position: absolute;
+    background-image: url("../assests/plus.svg");
+    background-size: cover;
+    top: 1.7rem;
+    right: 1.7rem;
+    width: 1.8rem;
+    height: 1.8rem;
+}
+.accordion .content{
+    display: none;
+}
+.content h3{
+    color: var(--primary-text-color);
+    font-size: 1.48rem;
+    font-weight: 400;
+}
+.accordion input[type="radio"]:checked ~ .content{
+    display: block;
+    padding: 1.5rem;
+}
+.accordion input[type="radio"]:checked ~ #plus-cross{
+    transform: rotate(45deg);
+}
+
+/* FAQ Component Ends ... */
+
+/* ----------------------------------------- */
+
+/* Footer Component Starts ... */
+
+.footer-layout{
+    width: 100%;
+    padding: 4rem 11.8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer{
+    width: 100%;
+    text-align: left;
+}
+footer .contact{
+    color: var(--secondary-text-color);
+    
+}
+footer .contact a{
+    color: var(--secondary-text-color);
+    text-decoration: underline;   
+    font-size: 1rem;
+}
+
+/* -> Footer Links Starts */
+
+footer .links{
+    margin: 1.5rem 0rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    row-gap: 1rem;
+    column-gap: 0.8rem;
+}
+footer .links li{
+    list-style: none;
+}
+footer .links li a{
+    color: var(--secondary-text-color);
+    font-size: 0.85rem;
+    text-decoration: underline;
+    transition: color 0.2s;
+}
+footer .links li a:active{
+    color: var(--primary-color);
+}
+
+/* -> Footer links Ends */
+
+footer #region{
+    margin-top: 1.9rem;
+    display: block;
+    color: var(--secondary-text-color);
+    font-size: 0.85rem;
+}
+
+/* Footer Component Starts ... */
+
+/* ------------------------------------- */
+/* ------------------------------------- */
+
+
+
+/* For Making Responsiveness Layouts */
 
 @media screen and (max-width: 1279px){
 
@@ -285,6 +574,50 @@ nav .logo img{
         max-width: none;
     }
 
+    /* Multimedia Component */
+
+    .multimedia-component{
+        width: 95%;
+        margin: 0;
+    }
+    .multimedia-layout .multimedia-component .multi-2 .multi-video{
+        height: 53%;
+    }
+    .multimedia-layout .mc2 .multi-2 .strange-box{
+        width: 64%;
+        left: 17%;
+        bottom: 8%;
+        height: 23%;
+        padding: 0.2rem 0.8rem;
+        justify-content: space-between;
+    }
+    .multimedia-layout .mc2 .multi-2 .strange-box .strange-book{
+        width: 14%;
+    }
+    .multimedia-layout .mc2 .multi-2 .strange-box .strange-text{
+        width: 65%;
+    }
+    .multimedia-layout .mc2 .multi-2 .strange-box .strange-gif{
+        width: 13%;
+    }
+
+    /* FAQ Component */
+
+    .faq-layout{
+        padding: 4rem 3%;
+    }
+    .faq-component > h2{
+        font-size: 3.2rem;
+    }
+    .accordion li label{
+        font-size: 1.55rem;
+    }
+
+    /* Footer Component */
+    
+    .footer-layout{
+        padding: 4rem 3%;
+    }
    
 }
 
@@ -299,6 +632,9 @@ nav .logo img{
     }
     .landing-component{
         padding: 0.1rem 2rem;
+    }
+    .background > img{
+        transform: scale(1.22) translateY(-11.8%);
     }
     .logo{
         padding-top: 0.4rem;
@@ -322,6 +658,96 @@ nav .logo img{
         font-size: 1.15rem;
     }
 
+    /* Multimedia Component Starts */
+
+    .multimedia-layout{
+        display: flex;
+    }
+    .multimedia-layout .multimedia-component{
+        flex-direction: column;
+        width: auto;
+        height: auto;
+        margin: 0 2rem;
+        align-items: center;
+    }
+    .multi-text h2{
+        font-size: 2.1rem;
+        font-weight: 700;
+    }
+    .multi-text p{
+        font-size: 1.15rem;
+        font-weight: 400;
+        margin: 0;
+        margin-top: 1.2rem;
+        margin-bottom: 1.2rem;
+    }
+    .multimedia-layout .multimedia-component .multi-1{
+        width: auto;
+    }
+    .multimedia-layout .multimedia-component .multi-2{
+        width: auto;
+        margin-bottom: 1rem;
+    }
+    .multimedia-layout .multimedia-component .multi-2 .multi-video{
+        height: 53%;
+    }
+    .multimedia-layout .mc2 .multi-2 .strange-box{
+        width: 65%;
+        left: 17%;
+        bottom: 7%;
+        height: 17%;
+        padding: 0rem 0.8rem;
+        justify-content: space-between;
+    }
+    .multimedia-layout .mc2 .multi-2 .strange-box .strange-book{
+        width: 11.5%;
+    }
+    .multimedia-layout .mc2 .multi-2 .strange-box .strange-text{
+        width: 65%;
+    }
+    .multimedia-layout .mc2 .multi-2 .strange-box .strange-gif{
+        width: 13%;
+    }
+    .multimedia-layout .multimedia-component .multi-1 .multi-text{
+        text-align: center;
+    }
+
+    /* FAQ Component */
+
+    .faq-layout{
+        padding: 4rem 4%;
+    }
+    .faq-component > h2{
+        font-size: 2.1rem;
+        margin-bottom: 1.5rem;
+    }
+    .accordion li label{
+        font-size: 1.15rem;
+        padding: 1.55rem 1.2rem 1.55rem 1.4rem;
+    }
+    .accordion li #plus-cross{
+        width: 1.3rem;
+        height: 1.3rem;
+        right: 1.5rem;
+    }
+    .content h3 {
+        font-size: 1.15rem;
+    }
+
+    /* Footer Component */
+
+    .footer-layout{
+        padding: 1.5rem 4%;
+        padding-bottom: 2rem;
+    }
+    footer .links{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        row-gap: 0.9rem;
+    }
+    footer #region{
+        margin-top: 1.5rem;
+    }
 
 }
 
@@ -332,7 +758,7 @@ nav .logo img{
     /* Landing Component */
 
     .wrapper{
-        height: 35rem;
+        height: 33rem;
     }
     .landing-component{
         padding: 0.1rem 1.5rem;
@@ -343,14 +769,14 @@ nav .logo img{
         transform: scale(1) translateY(-4.5%);
     }
     .logo{
-        padding-top: 0.2rem;
+        padding-top: 0.4rem;
     }
     .hero-layout{
         padding: 0;
         padding: 0 1.6rem;
     }
     .hero-component{
-        margin-top: 6rem;
+        margin-top: 4.8rem;
         width: 100%;
     }
     .subscription-form > div{
@@ -364,7 +790,7 @@ nav .logo img{
         height: 2.8rem;
     }
     .form-heading{
-        padding: 0 0.5rem;
+        padding: 0 0.8rem;
     }
     .subscription-form input[type="submit"]{
         margin-left: 0;
@@ -395,5 +821,70 @@ nav .logo img{
         left: 60%;
     }
 
+    /* Multimedia Component Starts */
+    
+    .multimedia-layout {
+        padding: 3rem 0;
+    }
+    .multimedia-layout .multimedia-component{
+        margin: 0 1.5rem;
+    }
+    
+    .multimedia-layout .mc2 .multi-2 .strange-box{
+        height: 4rem;
+        width: 85%;
+        left: 7%;
+        padding: 0.1rem 0.7rem;
+    }
+    .multimedia-layout .mc2 .multi-2 .strange-box .strange-book{
+        width: 2rem;
+    }
+    .multimedia-layout .mc2 .multi-2 .strange-box .strange-book{
+        object-fit: cover;
+    }
+    .multimedia-layout .mc2 .multi-2 .strange-box .strange-text{
+        width: 52%;
+    }
+    .multimedia-layout .mc2 .multi-2 .strange-box .strange-text p{
+        font-size: 0.92rem;
+        font-weight: 400 ;
+    }
+    .multimedia-layout .mc2 .multi-2 .strange-box .strange-text #downloading{
+        font-size: 0.75rem;
+    }
+    .multimedia-layout .mc2 .multi-2 .strange-box .strange-gif{
+        width: 3rem;
+    }
 
+    /* Footer Component */
+
+    .footer-layout{
+        padding: 1.5rem 6%;
+        padding-bottom: 1.8rem;
+    }
+    footer .links{
+        row-gap: 0.9rem;
+    }
+    footer #region{
+        margin-top: 1.5rem;
+    }
+    .footer-lang{
+        width: 7.5rem;
+    }
+    footer .lang-button #arrow-icon{
+        padding: 0 0;
+        left: 80%;
+    }
+    footer .lang-button #translation-icon{
+        left: 10%;
+    }
+}
+
+@media screen and (max-width: 480px){
+    
+    /* FAQ Component */
+    
+    .faq-layout{
+        padding: 3rem 6%;
+    }
 }
