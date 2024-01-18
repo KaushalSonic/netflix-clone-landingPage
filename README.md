@@ -1,4 +1,4 @@
-# **Netflix India Clone** :flying_saucer:
+# **Netflix India Clone** :flying_saucer:       
 
 ### :santa: Developer : _Kaushal Kishore_
 ### :date: Date : 18/01/2024
@@ -7,6 +7,8 @@
 * CSS3
 ### :memo: Description : This is a simple Landing webpage clone of "Netflix India"
 ### :open_mouth: Feature : Responsive across all devices
+### **[Live Link :rocket:](https://external.ink?to=external.ink?to=https://netflix-clone-landing-page-pi.vercel.app/)**
+
 
 <br>
 
