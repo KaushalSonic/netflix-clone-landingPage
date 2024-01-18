@@ -7,7 +7,7 @@
 * CSS3
 ### :memo: Description : This is a simple Landing webpage clone of "Netflix India"
 ### :open_mouth: Feature : Responsive across all devices
-### **[Live Link :rocket:](https://external.ink?to=external.ink?to=https://netflix-clone-landing-page-pi.vercel.app/)**
+### **<a href="https://netflix-clone-landing-page-pi.vercel.app" target="_blank">Live Link :rocket:</a>**
 
 
 <br>
