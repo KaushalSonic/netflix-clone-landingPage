@@ -469,9 +469,13 @@ nav .logo img{
     right: 1.7rem;
     width: 1.8rem;
     height: 1.8rem;
+    transition: transform 0.2s ease-out;
 }
 .accordion .content{
-    display: none;
+    padding: 0 1.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out, padding 0.2s ease-out;
 }
 .content h3{
     color: var(--primary-text-color);
@@ -479,7 +483,7 @@ nav .logo img{
     font-weight: 400;
 }
 .accordion input[type="radio"]:checked ~ .content{
-    display: block;
+    max-height: 100%;
     padding: 1.5rem;
 }
 .accordion input[type="radio"]:checked ~ #plus-cross{
