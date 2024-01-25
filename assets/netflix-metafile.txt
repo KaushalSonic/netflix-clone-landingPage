@@ -1,0 +1,9 @@
+Background color #000
+font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+
+Button red: #E50914
+Blue: #0071EB
+
+[class*="-red"] {
+  background-color: #E50914;
+}
