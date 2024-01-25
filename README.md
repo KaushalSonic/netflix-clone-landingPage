@@ -5,14 +5,19 @@
 ### :hammer_and_wrench: Tech Stack Used : 
 * HTML5
 * CSS3
-### :memo: Description : This is a simple Landing webpage clone of "Netflix India"
-### :open_mouth: Feature : Responsive across all devices
+### :memo: Description : This is a simple Landing webpage clone of "Netflix India".
+### :open_mouth: Feature : Responsive across all devices.
 ### **<a href="https://netflix-clone-landing-page-pi.vercel.app" target="_blank">Live Link :rocket:</a>**
 
+## *PageSpeed Insights* 💨
+### Desktop Report
+<img width="347" alt="desktop report" src="https://github.com/KaushalSonic/netflix-clone-landingPage/assets/88739514/f5869c8d-ddcd-4f69-a467-7bcccb77dfde"> <br>
+### Mobile Report 
+<img width="341" alt="mobile report" src="https://github.com/KaushalSonic/netflix-clone-landingPage/assets/88739514/f921847c-4c1d-4d21-892b-58a87bdc792f">
 
 <br>
 
-## *Responsive Views* 👀 :-
+## *Responsive Views* 👀 
 <h3> 📱 Mobile View --- </h3>
 <img width="224" alt="mobile view" src="https://github.com/KaushalSonic/netflix-clone-landingPage/assets/88739514/44e4f30b-65b7-43ee-a44d-02d3bdd2c30f">
 <h3> 👨‍💻 Tab View --- </h3>
